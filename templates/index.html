@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Webcam Pose Tracking</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Webcam Pose Tracking</h1>
+        <div class="description">
+            <p>
+                This web app demonstrates real-time pose tracking using your webcam. It uses the MediaPipe library to detect and track hand poses, body poses, and face meshes in the video feed. The processed video on the right shows the detected landmarks and connections.
+            </p>
+        </div>
+        <div class="video-container">
+            <video id="video" width="640" height="480" autoplay></video>
+            <img id="img" src="{{ url_for('video_feed') }}" width="640" height="480" />
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/camera.js') }}"></script>
+</body>
+</html>
